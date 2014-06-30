@@ -1,0 +1,14 @@
+<h1>Add a Manufacturer:</h1>
+<%= form_for @manufacturer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :country %>
+  <%= f.text_area :country %>
+
+  <%= f.submit %>
+<% end %>
+
+<div>
+<%= link_to "All Manufacturers", manufacturers_path %>
+</div>
