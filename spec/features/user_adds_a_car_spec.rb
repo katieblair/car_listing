@@ -43,5 +43,4 @@ feature 'user adds a car', %Q(
     expect(page).to_not have_content('Success')
     expect(page).to have_content('Error')
   end
-
 end
