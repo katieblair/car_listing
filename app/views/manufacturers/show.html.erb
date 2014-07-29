@@ -1,0 +1,28 @@
+<h1><% @manufacturer.name %></h1>
+
+<p><% @manufacturer.country %></p>
+
+
+<h3>Add a Car by This Manufacturer:</h3>
+<%= form_for [@manufacturer, @car] do |f| %>
+  <%= f.label :color %>
+  <%= f.text_field :color %><br>
+
+  <%= f.label :year %>
+  <%= f.text_area :year %>
+
+  <%= f.label :mileage %>
+  <%= f.text_area :mileage %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
+
+<div>
+<%= link_to "All Manufacturers", manufacturers_path %>
+</div>
+<div>
+  <%= link_to "All Cars", cars_path %>
+</div>
